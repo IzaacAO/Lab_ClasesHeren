@@ -9,7 +9,7 @@
 //   constructor(titulo, duracion)
 //     → guarda this.titulo y this.duracion (en minutos)
 //     → fija también this.precioBase = 15000
-//       (no llega por parámetro: toda película arranca así)
+//       (no llega porp parámetro: toda elícula arranca así)
 //
 //   precioBoleta()
 //     → retorna this.precioBase
@@ -31,7 +31,22 @@
 // ============================================================
 
 class Pelicula {
-  // Tu código aquí
+  constructor(titulo, duracion){
+
+    this.titulo = titulo
+    this.duracion = duracion
+    this.precioBase = 15000
+
+  }
+
+   precioBoleta(){
+    return this.precioBase;
+   }
+
+   ficha(){
+      return `${this.titulo} | ${this.duracion} min | $${this.precioBoleta()}`; 
+   }
+//     
 }
 
 // No borres esta línea: es la puerta por donde el test usa tu clase
